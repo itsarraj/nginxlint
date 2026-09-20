@@ -1,0 +1,23 @@
+[package]
+name = "nginxlint"
+version = "0.1.0"
+edition = "2021"
+description = "Lints an nginx config file for common misconfigurations — missing security headers, exposed server_tokens, weak/missing TLS protocols, missing upload body-size limits, wildcard server_name paired with SSL"
+license = "MIT"
+authors = ["Animesh Raj <animesh080808@gmail.com>"]
+repository = "https://github.com/itsarraj/nginxlint"
+readme = "README.md"
+keywords = ["nginx", "lint", "security", "config", "cli"]
+categories = ["command-line-utilities"]
+
+[lib]
+name = "nginxlint"
+path = "src/lib.rs"
+
+[[bin]]
+name = "nginxlint"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+anyhow = "1"
