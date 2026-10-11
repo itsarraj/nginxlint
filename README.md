@@ -6,6 +6,12 @@ missing/weak TLS protocol pins, a wildcard server name paired with SSL,
 and an upload endpoint with no body-size limit. Every one of these is a
 real, common way a hand-written nginx config quietly ships broken.
 
+## Installation
+
+```sh
+cargo install --path .
+```
+
 ## Usage
 
 ```bash
